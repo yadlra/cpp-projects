@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17", // Use C++17 standard
+                "-g", // Generate debug information
+                "${file}", // Current file
+                "-o", // Specify output file name
+                "${/Users/yadira/cpp-projects/cellular_automata_sdl.cpp}", // Output file
+                "`sdl2-config --cflags --libs`"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compiler: g++"
+        }
+    ]
+}
+
